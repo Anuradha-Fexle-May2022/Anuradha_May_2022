@@ -3,5 +3,6 @@ int main()
 {
 int number1,number2,number8,sum
 printf("Add two Numbers");
+printf("Subtract two Numbers");
 return 0;
 }
