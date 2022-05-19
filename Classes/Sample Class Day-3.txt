@@ -4,8 +4,7 @@ public Class MySampleClass
    public static String myString='';
    public static String myString4='';
    public static String myString5='';
-   public static String myString6='';
-    public static String myString12='';
+   public static String myString16='';
    public static String myString7='';
    public static String myString2='';
    public static String myString3='';
