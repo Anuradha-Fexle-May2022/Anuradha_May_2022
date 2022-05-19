@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-int number1,number2,sum
+int number1,number2,number4,sum
 printf("Add two Numbers");
 printf("Subtract two NUmbers");
 return 0;
