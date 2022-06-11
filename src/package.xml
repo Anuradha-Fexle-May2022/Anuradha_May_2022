@@ -1,86 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>StudentsQuery</members>
-        <members>insertStudentRecord</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>PAN_Card__c.Fathers_Name__c</members>
-        <members>PAN_Card__c.PIN_code__c</members>
-        <members>PAN_Card__c.User_Name__c</members>
-        <members>Student_Record__c.Account_Number__c</members>
-        <members>Student_Record__c.Address__c</members>
-        <members>Student_Record__c.Bank_Name__c</members>
-        <members>Student_Record__c.Bank_Phone_Number__c</members>
-        <members>Student_Record__c.City__c</members>
-        <members>Student_Record__c.Class__c</members>
-        <members>Student_Record__c.Contact_number__c</members>
-        <members>Student_Record__c.Current_Semester__c</members>
-        <members>Student_Record__c.Current_Year__c</members>
-        <members>Student_Record__c.Donation_Amount__c</members>
-        <members>Student_Record__c.Email__c</members>
-        <members>Student_Record__c.Emergency_Contact_Number__c</members>
-        <members>Student_Record__c.Exam_Fees_Submitted__c</members>
-        <members>Student_Record__c.Father_s_Mobile_Number__c</members>
-        <members>Student_Record__c.Father_s_Name__c</members>
-        <members>Student_Record__c.Female__c</members>
-        <members>Student_Record__c.Fess_Submitted__c</members>
-        <members>Student_Record__c.First_Name__c</members>
-        <members>Student_Record__c.GitHub_ID__c</members>
-        <members>Student_Record__c.Home_Phone__c</members>
-        <members>Student_Record__c.IFSC_code__c</members>
-        <members>Student_Record__c.Is_Donation__c</members>
-        <members>Student_Record__c.Last_Name__c</members>
-        <members>Student_Record__c.Male__c</members>
-        <members>Student_Record__c.Mobile_Number__c</members>
-        <members>Student_Record__c.Mothers_Name__c</members>
-        <members>Student_Record__c.Name__c</members>
-        <members>Student_Record__c.Occupation__c</members>
-        <members>Student_Record__c.Overall_Grade__c</members>
-        <members>Student_Record__c.Overall_Percentage__c</members>
-        <members>Student_Record__c.Pending_Exam_Fees__c</members>
-        <members>Student_Record__c.Pending_Fees_Amount__c</members>
-        <members>Student_Record__c.Pending_Overall_Amount__c</members>
-        <members>Student_Record__c.Roll_Number__c</members>
-        <members>Student_Record__c.Section__c</members>
-        <members>Student_Record__c.Semester_Details__c</members>
-        <members>Student_Record__c.State__c</members>
-        <members>Student_Record__c.Stream__c</members>
-        <members>Student_Record__c.Student_Name__c</members>
-        <members>Student_Record__c.Subject_in_which_Back_1_sem__c</members>
-        <members>Student_Record__c.Subject_in_which_Back_2_sem__c</members>
-        <members>Student_Record__c.Subject_in_which_back_3_sem__c</members>
-        <members>Student_Record__c.Subject_in_which_back_4_sem__c</members>
-        <members>Student_Record__c.X1st_Semester_Back__c</members>
-        <members>Student_Record__c.X1st_Semester_Percentage__c</members>
-        <members>Student_Record__c.X2nd_Semester_Percentage__c</members>
-        <members>Student_Record__c.X2nd_Semester_back__c</members>
-        <members>Student_Record__c.X3rd_Semester_Percentage__c</members>
-        <members>Student_Record__c.X3rd_Semester_back__c</members>
-        <members>Student_Record__c.X4th_Semester_Back__c</members>
-        <members>Student_Record__c.X4th_semester_percentage__c</members>
+        <members>Contact.PAN_Card__c</members>
+        <members>Contact.Year_of_Class__c</members>
+        <members>Employee__c.Mentor__c</members>
+        <members>Employee__c.Trainer__c</members>
+        <members>PAN_Card__c.Contact__c</members>
+        <members>StudentSubjects__c.Student__c</members>
+        <members>StudentSubjects__c.Subject__c</members>
         <members>Teacher__c.College__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>Student_Record__c</members>
+        <members>College__c</members>
+        <members>Employee__c</members>
+        <members>PAN_Card__c</members>
+        <members>StudentSubjects__c</members>
+        <members>Student__c</members>
+        <members>Subject__c</members>
+        <members>Year_of_Class__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Student_Record__c</members>
+        <members>College__c</members>
+        <members>Employee__c</members>
+        <members>PAN_Card__c</members>
+        <members>StudentSubjects__c</members>
+        <members>Student__c</members>
+        <members>Subject__c</members>
+        <members>Teacher__c</members>
+        <members>Year_of_Class__c</members>
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Student_Record__c-Registrar Layout</members>
-        <members>Student_Record__c-Student_Record Layout</members>
-        <members>Student_Record__c-Teacher Layout</members>
-        <name>Layout</name>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>Student_Record__c.Registrar_Layout</members>
-        <members>Student_Record__c.Teacher</members>
-        <name>RecordType</name>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
     <version>53.0</version>
 </Package>
