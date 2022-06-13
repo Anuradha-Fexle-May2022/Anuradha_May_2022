@@ -1,5 +1,7 @@
 public class StudentInformation {
     public static void studentInformation(){
+
+    public static void StudentInformation(){
         //Teacher Layout,Registrar Layout//
         //Student Personal Info//
         Student_Record__c student = new Student_Record__c();
