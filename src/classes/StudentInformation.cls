@@ -1,5 +1,5 @@
-public class insertStudentRecord {
-    public static void insertRecord(){
+public class StudentInformation {
+    public static void StudentInformation(){
         //Teacher Layout,Registrar Layout//
         //Student Personal Info//
         Student_Record__c student = new Student_Record__c();
@@ -61,5 +61,6 @@ public class insertStudentRecord {
         student.Exam_Fees_Submitted__c = True;
         student.Pending_Exam_Fees__c = 500;
 		insert student;
-    }
+ system.debug ('Check Latest Record'+ student );
+}
 }
