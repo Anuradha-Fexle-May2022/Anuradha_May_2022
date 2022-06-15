@@ -26,5 +26,44 @@
 	   <members>*</members>
 	   <name>GlobalValueSet</name>
     </types>
+    <types>
+        <members>Account</members>
+        <members>College__c</members>
+        <members>Contact</members>
+        <members>Employee__c</members>
+        <members>Lead</members>
+        <members>PAN_Card__c</members>
+        <members>StudentSubjects__c</members>
+        <members>Student__c</members>
+        <members>Subject__c</members>
+        <members>Teacher__c</members>
+        <members>Year_of_Class__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>College__c</members>
+        <members>Employee__c</members>
+        <members>PAN_Card__c</members>
+        <members>StudentSubjects__c</members>
+        <members>Student__c</members>
+        <members>Subject__c</members>
+        <members>Teacher__c</members>
+        <members>Year_of_Class__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Account-Account Layout</members>
+        <members>College__c-College Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>Employee__c-Employee Layout</members>
+        <members>Lead-Lead Layout</members>
+        <members>PAN_Card__c-PAN Card Layout</members>
+        <members>StudentSubjects__c-StudentSubjects Layout</members>
+        <members>Student__c-Student Layout</members>
+        <members>Subject__c-Subject Layout</members>
+        <members>Teacher__c-Teacher Layout</members>
+        <members>Year_of_Class__c-Year of Class Layout</members>
+        <name>Layout</name>
+    </types>   
 	<version>53.0</version>
 </Package>
