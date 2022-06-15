@@ -22,5 +22,9 @@
         <members>Student_Record__c.Registrar_Layout</members>
         <members>Student_Record__c.Teacher</members>
         <name>RecordType</name>
-    </types>    <version>53.0</version>
+    <types> 
+	   <members>*</members>
+	   <name>GlobalValueSet</name>
+    </types>
+	<version>53.0</version>
 </Package>

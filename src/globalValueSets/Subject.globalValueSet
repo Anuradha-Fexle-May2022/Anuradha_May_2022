@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DSA</fullName>
+        <default>false</default>
+        <label>DSA</label>
+    </customValue>
+    <customValue>
+        <fullName>Maths</fullName>
+        <default>false</default>
+        <label>Maths</label>
+    </customValue>
+    <customValue>
+        <fullName>Physics</fullName>
+        <default>false</default>
+        <label>Physics</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemistry</fullName>
+        <default>false</default>
+        <label>Chemistry</label>
+    </customValue>
+    <customValue>
+        <fullName>AOA</fullName>
+        <default>false</default>
+        <label>AOA</label>
+    </customValue>
+    <customValue>
+        <fullName>Hr Manager</fullName>
+        <default>false</default>
+        <label>Hr Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Economics</fullName>
+        <default>false</default>
+        <label>Economics</label>
+    </customValue>
+    <masterLabel>Subject</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
