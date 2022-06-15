@@ -64,6 +64,26 @@
         <members>Teacher__c-Teacher Layout</members>
         <members>Year_of_Class__c-Year of Class Layout</members>
         <name>Layout</name>
-    </types>   
+    </types> 
+    <types>
+        <members>DreamWorld</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Dream_World__c.Dream_World_Title__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Dream_World__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Dream_World__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Dream_World__c</members>
+        <name>Layout</name>
+    </types>    
 	<version>53.0</version>
 </Package>
