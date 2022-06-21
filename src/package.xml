@@ -99,6 +99,11 @@
     <types>
         <members>Dream_World__c</members>
         <name>Layout</name>
-    </types>    
+    </types>
+    <types>
+        <members>PatternPrintingOfLeftTriangle</members>
+        <name>ApexClass</name>
+    </types>
+    
 	<version>53.0</version>
 </Package>
