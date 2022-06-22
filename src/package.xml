@@ -104,6 +104,46 @@
         <members>PatternPrintingOfLeftTriangle</members>
         <name>ApexClass</name>
     </types>
+<<<<<<< Updated upstream
     
+=======
+    <types>
+        <members>HelloWorldTestClass</members>
+        <members>MyHelloWorld</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Book__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Book__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Book__c-Book Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>HelloWorld</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Hello_World__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Hello_World__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>PatternPrintingOfLeftTriangle</members>
+        <name>ApexClass</name>
+    </types>
+>>>>>>> Stashed changes
 	<version>53.0</version>
 </Package>
