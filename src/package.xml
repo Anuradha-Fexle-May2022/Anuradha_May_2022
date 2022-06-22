@@ -104,9 +104,6 @@
         <members>PatternPrintingOfLeftTriangle</members>
         <name>ApexClass</name>
     </types>
-<<<<<<< Updated upstream
-    
-=======
     <types>
         <members>HelloWorldTestClass</members>
         <members>MyHelloWorld</members>
@@ -144,6 +141,5 @@
         <members>PatternPrintingOfLeftTriangle</members>
         <name>ApexClass</name>
     </types>
->>>>>>> Stashed changes
 	<version>53.0</version>
 </Package>
