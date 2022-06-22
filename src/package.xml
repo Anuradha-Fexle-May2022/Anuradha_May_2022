@@ -137,5 +137,9 @@
         <members>Hello_World__c</members>
         <name>CustomTab</name>
     </types>
+    <types>
+        <members>PatternPrintingOfLeftTriangle</members>
+        <name>ApexClass</name>
+    </types>
 	<version>53.0</version>
 </Package>
