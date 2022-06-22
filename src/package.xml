@@ -104,6 +104,26 @@
         <members>PatternPrintingOfLeftTriangle</members>
         <name>ApexClass</name>
     </types>
-    
+    <types>
+        <members>HelloWorldTestClass</members>
+        <members>MyHelloWorld</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Book__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Book__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Book__c-Book Layout</members>
+        <name>Layout</name>
+    </types>
 	<version>53.0</version>
 </Package>
