@@ -141,5 +141,9 @@
         <members>PatternPrintingOfLeftTriangle</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>PractiseOnPrimitiveDataTypes</members>
+        <name>ApexClass</name>
+    </types>
 	<version>53.0</version>
 </Package>
