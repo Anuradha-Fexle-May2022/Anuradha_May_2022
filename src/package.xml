@@ -145,5 +145,9 @@
         <members>PractiseOnPrimitiveDataTypes</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>PractiseOnOperators</members>
+        <name>ApexClass</name>
+    </types>
 	<version>53.0</version>
 </Package>
