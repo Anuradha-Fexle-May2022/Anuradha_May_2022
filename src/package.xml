@@ -149,5 +149,14 @@
         <members>PractiseOnOperators</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>CallByValueAndReference</members>
+        <members>Constructor_Example</members>
+        <members>Overloading_Example</members>
+        <members>PractiseOn_Loops</members>
+        <members>School</members>
+        <members>Teacher</members>
+        <name>ApexClass</name>
+    </types>
 	<version>53.0</version>
 </Package>
