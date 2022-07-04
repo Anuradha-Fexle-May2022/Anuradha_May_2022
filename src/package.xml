@@ -158,5 +158,16 @@
         <members>Teacher</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>CustomerPurchaseOrder</members>
+        <members>EmployeePurchaseOrder</members>
+        <members>InstanceOfExample</members>
+        <members>ProcessPurchaseOrder</members>
+        <members>PurchaseOrder</members>
+        <members>SubClass</members>
+        <members>SuperClass</members>
+        <members>UseThisKeyword</members>
+        <name>ApexClass</name>
+    </types>
 	<version>53.0</version>
 </Package>
