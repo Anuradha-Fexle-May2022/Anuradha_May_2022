@@ -139,26 +139,13 @@
     </types>
     <types>
         <members>PatternPrintingOfLeftTriangle</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>PractiseOnPrimitiveDataTypes</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>PractiseOnOperators</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
+        <members>PractiseOnPrimitiveDataTypes</members>                    	  <members>PractiseOnOperators</members>
         <members>CallByValueAndReference</members>
         <members>Constructor_Example</members>
         <members>Overloading_Example</members>
         <members>PractiseOn_Loops</members>
         <members>School</members>
         <members>Teacher</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
         <members>CustomerPurchaseOrder</members>
         <members>EmployeePurchaseOrder</members>
         <members>InstanceOfExample</members>
@@ -167,7 +154,9 @@
         <members>SubClass</members>
         <members>SuperClass</members>
         <members>UseThisKeyword</members>
+        <members>InsertUpdatesObjectClass</members>
+        <members>MapWithCountryStateAndDistrict</members>
         <name>ApexClass</name>
-    </types>
+      </types>
 	<version>53.0</version>
 </Package>
