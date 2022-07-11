@@ -156,6 +156,11 @@
         <members>UseThisKeyword</members>
         <members>InsertUpdatesObjectClass</members>
         <members>MapWithCountryStateAndDistrict</members>
+        <members>AddingAndRetrievingDataWithDML</members>
+        <members>ExampleOfDML</members>
+        <members>InsertAndUpdateRecords</members>
+        <members>ParentChildRecords</members>
+        <members>RelatedRecordsUsingExternalID</members>
         <name>ApexClass</name>
       </types>
 	<version>53.0</version>
