@@ -7,10 +7,16 @@
     </types>
     <types>
         <members>Student_Record__c</members>
+	   <members>Country__c</members>
+        <members>District__c</members>
+        <members>State__c</members>
         <name>CustomObject</name>
     </types>
     <types>
         <members>Student_Record__c</members>
+	   <members>Country__c</members>
+        <members>District__c</members>
+        <members>State__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -161,6 +167,8 @@
         <members>InsertAndUpdateRecords</members>
         <members>ParentChildRecords</members>
         <members>RelatedRecordsUsingExternalID</members>
+	   <members>AggregrateQueries</members>
+        <members>MapLogic</members>
         <name>ApexClass</name>
       </types>
 	<version>53.0</version>
