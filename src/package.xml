@@ -22,6 +22,9 @@
     <types>
         <members>Student_Record__c-Registrar Layout</members>
         <members>Student_Record__c-Teacher Layout</members>
+        <members>Country__c-Country Layout</members>
+        <members>District__c-District Layout</members>
+        <members>State__c-State Layout</members>
         <name>Layout</name>
     </types>
     <types>
@@ -171,5 +174,15 @@
         <members>MapLogic</members>
         <name>ApexClass</name>
       </types>
+	<types>
+        <members>*</members>
+        <name>Profile</name>
+     </types>
+     <types>
+        <members>Country__c</members>
+        <members>District__c</members>
+        <members>State__c</members>
+        <name>SharingRules</name>
+     </types>
 	<version>53.0</version>
 </Package>

@@ -1,52 +1,64 @@
 public with sharing class AggregrateQueries {
+    //Do Aggregrate Queries For finding State and District From Country
     public AggregrateQueries() {
-        List<AggregateResult> stateDetails = [Select Country__c, COUNT(Name) Total_Number_Of_States from State__c Group By Country__c];
-        if (stateDetails.size() > 0)
+        try
         {
-            Map<ID,Country__c> a = new Map<ID,Country__c>();
-        for (AggregateResult state : stateDetails) 
+        Map<ID,Country__c> mapOfIdForCountry = new Map<ID,Country__c>();
+        //In this we can do aggregrate Queries for finding Total Number Of States from Country
+        for (AggregateResult state : [Select Country__c, COUNT(Name) Total_Number_Of_States from State__c Group By Country__c]) 
         {
             Country__c cont = new Country__c();
             cont.ID = (ID)state.get('Country__c');
             cont.Total_Number_Of_States__c = (Decimal)state.get('Total_Number_Of_States');
-            a.put(cont.ID,cont);
+            mapOfIdForCountry.put(cont.ID,cont);
         }
-        if(a != null) {
-        update a.values();
+        if(mapOfIdForCountry != null) {
+        update mapOfIdForCountry.values();
         }
+        }
+        catch (DmlException e)
+        {
+            system.debug('An unexpected error has occurred: ' + e.getMessage());
         }
 
-        List<AggregateResult> districtDetails = [Select State__c, COUNT(Name) Total_Number_Of_Districts from District__c Group By State__c];
-        if (districtDetails.size() > 0)
+        try
         {
-        Map<ID,State__c> d = new Map<ID,State__c>();
-        for (AggregateResult district : districtDetails) 
+        Map<ID,State__c> mapIdForState = new Map<ID,State__c>();
+        //In this we can do Aggregate Queries for finding Total Number Of District from State
+        for (AggregateResult district : [Select State__c, COUNT(Name) Total_Number_Of_Districts from District__c Group By State__c]) 
         {
-            State__c s = new State__c();
-            s.ID = (ID)district.get('State__c');
-            s.Total_Number_of_Districts__c = (Decimal)district.get('Total_Number_Of_Districts');
-            d.put(s.ID,s);
+            State__c stat = new State__c();
+            stat.ID = (ID)district.get('Country__c');
+            stat.Total_Number_of_Districts__c = (Decimal)district.get('Total_Number_Of_Districts');
+            mapIdForState.put(stat.ID,stat);
         }
-        if(d != null) {
-        update d.values();
+        if(mapIdForState != null) {
+        update mapIdForState.values();
         }
+        }
+        catch (DmlException e)
+        {
+            system.debug('An unexpected error has occurred: ' + e.getMessage());
         }
 
-
-        List<AggregateResult> countryDetails = [Select Country__c, sum(Total_Number_Of_Districts__c) Total_Number_Of_Districts fROM State__c Group By Country__c];
-        if (countryDetails .size() > 0)
+        try
         {
-        Map<ID,Country__c> x = new Map<ID,Country__c>();
-        for (AggregateResult countryList : countryDetails) 
+        Map<ID,Country__c> mapOfCountryWithDistrict = new Map<ID,Country__c>();
+        // In this we can do Aggregrate Queries for finding Total Number Of District from Country
+        for (AggregateResult countryList : [Select Country__c, sum(Total_Number_Of_Districts__c) Total_Number_Of_Districts fROM State__c Group By Country__c]) 
         {
-            Country__c dis = new Country__c();
-            dis.ID = (ID)countryList.get('Country__c');
-            dis.Total_Number_of_Districts__c = (Decimal)countryList.get('Total_Number_Of_Districts');
-            x.put(dis.ID,dis);
+            Country__c cont = new Country__c();
+            cont.ID = (ID)countryList.get('Country__c');
+            cont.Total_Number_of_Districts__c = (Decimal)countryList.get('Total_Number_Of_Districts');
+            mapOfCountryWithDistrict.put(cont.ID,cont);
         }
-        if(x != null) {
-        update x.values();
+        if(mapOfCountryWithDistrict != null) {
+        update mapOfCountryWithDistrict.values();
         }
+        }
+        catch (DmlException e)
+        {
+            system.debug('An unexpected error has occurred: ' + e.getMessage());
         }
     }
 }

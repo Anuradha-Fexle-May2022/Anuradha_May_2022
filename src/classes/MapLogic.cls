@@ -2,31 +2,32 @@ public with sharing class MapLogic {
     Map<String,Map<String,List<String>>> mapOfCountry = new Map<String,Map<String,List<String>>>();
     Country cont = new Country();
 
-    //Fill Country State District Map Dynamically 
+    //Make Constructor and fill Country State District Map Dynamically 
     public MapLogic() 
     {
         try
         {
-                for(District__c district :  [SELECT Name, State__r.Country__r.Name, State__r.Name FROM District__c]) 
+            //In this We do SOQL Queries On District For Getting Country and State
+            for(District__c district :  [SELECT Name, State__r.Country__r.Name, State__r.Name FROM District__c]) 
+            {
+                if (!mapOfCountry.containskey(district.State__r.Country__r.Name))
                 {
-                    if (!mapOfCountry.containskey(district.State__r.Country__r.Name))
-                    {
-                        mapOfCountry.put(district.State__r.Country__r.Name, new Map<String,List<String>>());
-                    }
-
+                    mapOfCountry.put(district.State__r.Country__r.Name, new Map<String,List<String>>());
+                }
+                
                 if(mapOfCountry != null && mapOfCountry.get(district.State__r.Country__r.Name) != null)
                 {
-                Map<String,List<String>> mapOfStateWithDistricts = mapOfCountry.get(district.State__r.Country__r.Name);
-                if(!mapOfStateWithDistricts.containskey(district.State__r.Name))
-                {
-                mapOfStateWithDistricts.put(district.State__r.Name, new List<String>());
-                }
-
-                if(mapOfStateWithDistricts != null)
-                {
-                mapOfStateWithDistricts.get(district.State__r.Name).add(district.Name);
-                mapOfCountry.put(district.State__r.Country__r.Name, mapOfStateWithDistricts);
-                }
+                    Map<String,List<String>> mapOfStateWithDistricts = mapOfCountry.get(district.State__r.Country__r.Name);
+                    if(!mapOfStateWithDistricts.containskey(district.State__r.Name))
+                    {
+                        mapOfStateWithDistricts.put(district.State__r.Name, new List<String>());
+                    }
+                    
+                    if(mapOfStateWithDistricts != null)
+                    {
+                        mapOfStateWithDistricts.get(district.State__r.Name).add(district.Name);
+                        mapOfCountry.put(district.State__r.Country__r.Name, mapOfStateWithDistricts);
+                    }
                 }  
             }
             system.debug('MapOfCountry :' + mapOfCountry);
@@ -42,31 +43,27 @@ public with sharing class MapLogic {
     {
         try
         {
-        for(String gotCountry :mapOfCountry.keyset()){
-            if(mapOfCountry != null)
-            {
-            if(mapOfCountry.containsKey(gotCountry)){
-                for(String gotState :mapOfCountry.get(gotCountry).keyset()){
-                    if(mapOfCountry != null && mapOfCountry.get(gotCountry) != null)
-                    {
-                    if(mapOfCountry.get(gotCountry).containsKey(gotState)){
-                        for(String gotDistrict :mapOfCountry.get(gotCountry).get(gotState)){
-                            if(gotDistrict.length() >= 12){
-                                system.debug('District :' + gotDistrict);
+            for(String gotCountry :mapOfCountry.keyset()){
+                if(mapOfCountry.containsKey(gotCountry)){
+                    for(String gotState :mapOfCountry.get(gotCountry).keyset()){
+                        if(mapOfCountry != null && mapOfCountry.get(gotCountry) != null)
+                        {
+                            if(mapOfCountry.get(gotCountry).containsKey(gotState)){
+                                for(String gotDistrict :mapOfCountry.get(gotCountry).get(gotState)){
+                                    if(gotDistrict.length() >= 12){
+                                        system.debug('District :' + gotDistrict);
+                                    }
+                                }
                             }
-                        }
+                        }   
                     }
-                    }   
                 }
             }
-            }
-        }
         }
         catch (DmlException e)
         {
             system.debug('An unexpected error has occurred: ' + e.getMessage());
         }
-        
     }
     
     //2. Find a combination of Country, state and districts where it starts with 's'.
@@ -75,27 +72,27 @@ public with sharing class MapLogic {
         try
         {
             Map<String,Map<String,List<String>>> mapOfcombinationOfCountry = new Map<String,Map<String,List<String>>>();
-                for(District__c district : [SELECT Name, State__r.Country__r.Name, State__r.Name FROM District__c  WHERE (Name LIKE :B + '%' AND State__r.Name LIKE :B + '%' AND State__r.Country__r.Name LIKE :B + '%')]) 
+            for(District__c district : [SELECT Name, State__r.Country__r.Name, State__r.Name FROM District__c  WHERE (Name LIKE :B + '%' AND State__r.Name LIKE :B + '%' AND State__r.Country__r.Name LIKE :B + '%')]) 
+            {
+                if (!mapOfcombinationOfCountry.containskey(district.State__r.Country__r.Name))
                 {
-                    if (!mapOfcombinationOfCountry.containskey(district.State__r.Country__r.Name))
-                    {
-                        mapOfcombinationOfCountry.put(district.State__r.Country__r.Name, new Map<String,List<String>>());
-                    }
-                    if(mapOfcombinationOfCountry != null && mapOfcombinationOfCountry.get(district.State__r.Country__r.Name) != null)
-                    {
-                        Map<String,List<String>> mapOfStateWithDistricts = mapOfcombinationOfCountry.get(district.State__r.Country__r.Name);
-                        if(!mapOfStateWithDistricts.containskey(district.State__r.Name))
-                        {
-                            mapOfStateWithDistricts.put(district.State__r.Name, new List<String>());
-                        }
-                        if(mapOfStateWithDistricts != null)
-                        {
-                            mapOfStateWithDistricts.get(district.State__r.Name).add(district.Name);
-                            mapOfcombinationOfCountry.put(district.State__r.Country__r.Name, mapOfStateWithDistricts);
-                        } 
-                    }
+                    mapOfcombinationOfCountry.put(district.State__r.Country__r.Name, new Map<String,List<String>>());
                 }
-                system.debug('mapOfcombinationOfCountry :' + mapOfcombinationOfCountry);
+                if(mapOfcombinationOfCountry != null && mapOfcombinationOfCountry.get(district.State__r.Country__r.Name) != null)
+                {
+                    Map<String,List<String>> mapOfStateWithDistricts = mapOfcombinationOfCountry.get(district.State__r.Country__r.Name);
+                    if(!mapOfStateWithDistricts.containskey(district.State__r.Name))
+                    {
+                        mapOfStateWithDistricts.put(district.State__r.Name, new List<String>());
+                    }
+                    if(mapOfStateWithDistricts != null)
+                    {
+                        mapOfStateWithDistricts.get(district.State__r.Name).add(district.Name);
+                        mapOfcombinationOfCountry.put(district.State__r.Country__r.Name, mapOfStateWithDistricts);
+                    } 
+                }
+            }
+            system.debug('mapOfcombinationOfCountry :' + mapOfcombinationOfCountry);
         }
         catch (DmlException e)
         {
@@ -103,6 +100,7 @@ public with sharing class MapLogic {
         }
     }
     
+    //Create a JSON Format and then serialize the Country Data 
     public void CountryStateJSonGenerator(String countryName,Integer countryCode) 
     {
         try
@@ -112,6 +110,7 @@ public with sharing class MapLogic {
             {
                 cont.countryName = countryName;
                 cont.countryCode = countryCode;
+                cont.states = new List<states>();
 
                 List<AggregateResult> totalNumberOfState = [SELECT COUNT(Name) Total_Number_Of_States FROM State__c WHERE Country__r.Name = :countryName  Group By Country__r.Name];  
                 if(totalNumberOfState.size() > 0)
@@ -140,11 +139,12 @@ public with sharing class MapLogic {
                                     dis.districtName = dist;
                         
                                     st.districts.add(dis);
-                                }    
+                                }
+                                cont.states.add(st);  
                             }
                             con[0].Country_JSON_Data__c = JSON.serialize(cont);
-                            update con[0];
                         }
+                        update con[0];
                     }
                 }
             }
@@ -153,10 +153,11 @@ public with sharing class MapLogic {
         {
             system.debug('An unexpected error has occurred: ' + e.getMessage());
         }
-    }
+    } 
 
-    //Make Wrapper Class for Initilize the Data
+    //Make Wrapper Class for Initilize the Country,State and District Data
     public class Country{
+        public List<States> states{get;set;}
         public String countryName{get;set;}
         public Integer totalNumberOfStates{get;set;}
         public Integer totalNumberOfDistricts{get;set;}
