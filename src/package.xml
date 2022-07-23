@@ -47,6 +47,7 @@
         <members>Subject__c</members>
         <members>Teacher__c</members>
         <members>Year_of_Class__c</members>
+        <members>Account</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -80,6 +81,8 @@
     </types>
     <types>
         <members>Day7__c.Hello_World__c</members>
+        <members>Account.Account_Details__c</members>
+        <members>Account.Email_Address__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -172,6 +175,7 @@
         <members>RelatedRecordsUsingExternalID</members>
 	   <members>AggregrateQueries</members>
         <members>MapLogic</members>
+        <members>AccountTriggerHandler</members>
         <name>ApexClass</name>
       </types>
 	<types>
