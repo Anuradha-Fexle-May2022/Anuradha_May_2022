@@ -501,6 +501,30 @@
         <fullName>YearStarted</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
+    <fields>
+        <fullName>Account_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Saving Account</fullName>
+                    <default>false</default>
+                    <label>Saving Account</label>
+                </value>
+                <value>
+                    <fullName>Fixed Account</fullName>
+                    <default>false</default>
+                    <label>Fixed Account</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <listViews>
         <fullName>AllAccounts</fullName>
         <filterScope>Everything</filterScope>
